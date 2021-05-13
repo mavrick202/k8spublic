@@ -26,6 +26,6 @@ spec:
     spec:
       containers:
       - name: hello-kubernetes
-        image: sreeharshav/rollingupdate:v5
+        image: sreeharshav/rollingupdate:v1
         ports:
         - containerPort: 80
