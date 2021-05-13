@@ -1,28 +1,28 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-kubernetes-custom
+  name: dev-deploy
 spec:
   type: NodePort
   ports:
   - port: 8000
     targetPort: 80
   selector:
-    app: hello-kubernetes-custom
+    app: dev-deploy
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-kubernetes-custom
+  name: dev-deploy
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: hello-kubernetes-custom
+      app: dev-deploy
   template:
     metadata:
       labels:
-        app: hello-kubernetes-custom
+        app: dev-deploy
     spec:
       containers:
       - name: hello-kubernetes
