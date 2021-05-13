@@ -26,9 +26,6 @@ spec:
     spec:
       containers:
       - name: hello-kubernetes
-        image: paulbouwer/hello-kubernetes:1.8
+        image: sreeharshav/rollingupdate:v5
         ports:
-        - containerPort: 8080
-        env:
-        - name: MESSAGE
-          value: I just deployed this on Kubernetes!
+        - containerPort: 80
